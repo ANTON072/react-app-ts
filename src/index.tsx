@@ -1,31 +1,30 @@
-import React, { useState } from 'react';
-import * as ReactDOM from 'react-dom';
-import 'reset-css';
-import styled from 'styled-components';
+import React, { useState } from "react"
+import * as ReactDOM from "react-dom"
+import "reset-css"
+import styled from "styled-components"
 
-// interface HelloProps {
-//   name: string;
-// }
+interface HelloProps {
+  name: string
+}
 
-// const Hello: React.FC<HelloProps> = ({ name }) => <Title>Hello {name}!</Title>;
+const Title = styled.h1`
+  color: red;
+  background: blue;
+`
 
-// const App: React.FC = () => {
-//   const [count, setCount] = useState(0);
-//   return (
-//     <React.Fragment>
-//       <Hello name="hoge" />
-//       <h3>
-//         Count: {count}
-//         <button onClick={() => setCount(count + 1)}>Count</button>
-//       </h3>
-//     </React.Fragment>
-//   );
-// };
+const Hello: React.FC<HelloProps> = ({ name }) => <Title>Hello {name}!</Title>
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+const App: React.FC = () => {
+  const [count, setCount] = useState(0)
+  return (
+    <React.Fragment>
+      <Hello name="hoge" />
+      <h3>
+        Count: {count}
+        <button onClick={() => setCount(count + 1)}>Count</button>
+      </h3>
+    </React.Fragment>
+  )
+}
 
-// const Title = styled.h1`
-//   color: red;
-// `;
-
-console.log('Hello World');
+ReactDOM.render(<App />, document.getElementById("root"))

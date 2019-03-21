@@ -4,6 +4,8 @@
   ],
   "extends": [
     "stylelint-config-recommended",
-    "stylelint-config-styled-components"
+    "stylelint-config-styled-components",
+    "stylelint-config-rational-order",
+    './node_modules/prettier-stylelint/config.js',
   ]
 }
